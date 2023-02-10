@@ -1455,7 +1455,8 @@ class Mainthread(QThread):
 
             elif "restart" in self.query:
                 speak("ok sir, the system is restarting now.")
-                os.system("restart /r /t 5")     
+                os.system("restart /r /t 5")
+                pyautogui.press("enter")
 
             elif "tell news" in self.query or "tell the news" in self.query:
                 speak("ok sir, fetching latest news please wait a second")
